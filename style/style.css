@@ -55,7 +55,7 @@ body {
   margin-bottom: 0.5rem;
 }
 .container__info li::before {
-  content: url(/assets/images/icon-list.svg);
+  content: url("../assets/images/icon-list.svg");
   display: inline-block;
   margin-right: 0.5rem;
   vertical-align: middle;
