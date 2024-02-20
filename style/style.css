@@ -97,7 +97,7 @@ body {
   width: 100%;
 }
 .container__form button:hover, .container__form button:focus {
-  transition: 0.2;
+  transition: 0.2s;
   background: #f76458;
 }
 
@@ -118,4 +118,37 @@ body {
 .container__image img {
   height: auto;
   width: 100%;
+}
+
+.modal {
+  display: block;
+  width: 30%;
+}
+.modal img {
+  margin-bottom: 1rem;
+}
+.modal h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.modal p {
+  margin-bottom: 1rem;
+}
+.modal span {
+  font-weight: 700;
+}
+.modal a {
+  display: block;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  background-color: #242741;
+  color: #ffffff;
+}
+.modal a:hover, .modal a:focus {
+  transition: 0.2s;
+  background: #f76458;
 }/*# sourceMappingURL=style.css.map */

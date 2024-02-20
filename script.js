@@ -1,19 +1,37 @@
+'use strict'
 let containerEmailInput = document.getElementById('containerEmailInput')
 let containerSubscribeButton = document.getElementById('containerSubscribeButton')
 let invalidEmailMessage = document.getElementById('invalidEmailMessage')
 
-let emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+let successSubscribeSpan = document.getElementById('successSubscribeSpan');
 
+if (containerEmailInput) {
 
-
-function validate(regex, str) {
-    invalidEmailMessage.style.display = "none";
-    if (!regex.test(str)) {
-        invalidEmailMessage.style.display = "inline-block";
+    let emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    
+    function validate(regex, str) {
+        invalidEmailMessage.style.display = "none";
+        if (!regex.test(str.value)) {
+            invalidEmailMessage.style.display = "inline-block";
+            str.focus();
+            return false
+        }
+        return true
+    }
+    
+    containerSubscribeButton.onclick = (e) => {
+        e.preventDefault();
+        containerSubscribeButton.blur()
+        if (validate(emailPattern, containerEmailInput)) {
+            window.location.href = 'success.html';
+            localStorage.setItem('subscriberEmail', containerEmailInput.value)
+        }  
     }
 }
 
-containerSubscribeButton.onclick = (e) => {
-    e.preventDefault();
-    validate(emailPattern, containerEmailInput.value);
+if (successSubscribeSpan) {
+    let subscriberEmail = localStorage.getItem('subscriberEmail')
+    console.log(subscriberEmail)
+    successSubscribeSpan.innerText = subscriberEmail
 }
+
