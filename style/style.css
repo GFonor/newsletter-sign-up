@@ -143,7 +143,7 @@ body {
     padding: 1rem;
   }
   .container__form button {
-    margin-bottom: 2rem;
+    margin-bottom: 2.75rem;
   }
 }
 .modal {
@@ -193,7 +193,7 @@ body {
     height: 100vh;
   }
   .modal a {
-    margin-bottom: 2rem;
+    margin-bottom: 2.75rem;
   }
   .modal__info {
     margin: auto 0;
