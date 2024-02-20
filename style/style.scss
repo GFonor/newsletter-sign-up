@@ -174,7 +174,9 @@ body {
 
 .modal {
     display: block;
-    width: 30%;
+    width: 50%;
+    max-width: 26rem;
+    padding: 2.5rem;
 
     img {
         margin-bottom: 1rem;
@@ -216,6 +218,7 @@ body {
 @media screen and (max-width: 690px) {
     body {
         height: 100vh;
+        background-color: #ffffff;
     }
     
     .modal {
