@@ -125,13 +125,11 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  body {
-    height: auto;
-  }
   .container {
     width: 100%;
     flex-direction: column-reverse;
     padding: 0;
+    height: 100vh;
   }
   .container__image_desktop {
     display: none;
@@ -143,6 +141,9 @@ body {
   .container__text {
     width: 100%;
     padding: 1rem;
+  }
+  .container__form button {
+    margin-bottom: 2rem;
   }
 }
 .modal {
@@ -190,6 +191,9 @@ body {
     flex-direction: column;
     gap: 100px;
     height: 100vh;
+  }
+  .modal a {
+    margin-bottom: 2rem;
   }
   .modal__info {
     margin: auto 0;

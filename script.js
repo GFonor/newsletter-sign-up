@@ -21,7 +21,7 @@ if (containerEmailInput) {
     
     containerSubscribeButton.onclick = (e) => {
         e.preventDefault();
-        containerSubscribeButton.blur()
+        containerSubscribeButton.blur();
         if (validate(emailPattern, containerEmailInput)) {
             window.location.href = 'success.html';
             localStorage.setItem('subscriberEmail', containerEmailInput.value)
