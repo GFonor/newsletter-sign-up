@@ -27,6 +27,7 @@ if (containerEmailInput) {
             localStorage.setItem('subscriberEmail', containerEmailInput.value)
         }  
     }
+    containerEmailInput.onkeydown = () => invalidEmailMessage.style.display = 'none'
 }
 
 if (successSubscribeSpan) {
